@@ -55,8 +55,10 @@ function deleted(itemindex){
 }
 let clearing = document.getElementById("clear").value;
 function clearList(){
+    if(confirm("Do you really want to clear the List?")){
     console.log("clearing the whole list");
     localStorage.clear();
     update();
-    alert("Your to dos list has been cleared!")
+};
+    alert("Your to dos list has been cleared!");
 }
